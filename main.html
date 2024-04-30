@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #nazz{
+                background-color: aquamarine;
+                color: black;
+            }
+            ul{
+              display: flex;
+              justify-content: space-around;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="nazz">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+            reiciendis exercitationem sequi nihil quasi alias harum quia ad!
+            Vel, corrupti?</p>
+        <ul>
+          <li>home </li>
+          <li>about us</li>
+          <li>
+            <a href="#">service</a>
+            <li>a</li>
+            <li>b</li>
+          </l>
+          <li>contact</li>
+        </ul>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter Section</title>
+<style>
+  .counter-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f0f0f0;
+  }
+  .counter {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 76%);
+  }
+</style>
+</head>
+<body>
+
+<section class="counter-section">
+  <div class="counter">
+    <span id="count1">0</span>
+    <p>Counter 1</p>
+  </div>
+</section>
+
+<script>
+  // Function to increment counters
+  function countUp(targetElement, start, end, duration) {
+    let current = start;
+    const increment = (end - start) / duration;
+    const timer = setInterval(function() {
+      current += increment;
+      targetElement.textContent = Math.floor(current);
+      if (current >= end) {
+        clearInterval(timer);
+        targetElement.textContent = end;
+      }
+    }, 1000);
+  }
+
+  // Call countUp function for each counter
+  countUp(document.getElementById('count1'), 0, 19, 5); // Counter 1, start: 0, end: 100, duration: 5 seconds
+  countUp(document.getElementById('count2'), 50, 200, 7); // Counter 2, start: 50, end: 200, duration: 7 seconds
+  countUp(document.getElementById('count3'), 20, 300, 9); // Counter 3, start: 20, end: 300, duration: 9 seconds
+</script>
+
+</body>
+</html>
